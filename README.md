@@ -46,7 +46,7 @@ Shoriu P2P FileShare separates **signaling** from the actual file transfer.
    ┌──────────────┐           ┌──────────────┐
    │     Peer A   │◄─────────►│     Peer B   │
    │              │  WebRTC   │              │
-   │   Sender     │ DataChannel│  Receiver   │
+   │   Sender     │DataChannel│  Receiver   │
    └──────────────┘           └──────────────┘
              │
              │
