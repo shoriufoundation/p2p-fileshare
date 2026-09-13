@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Direct peer-to-peer file sharing by Shoriu Foundation."
+    >
+
+    <title>Shoriu P2P FileShare</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div class="brand">
+
+            <strong>
+                Shoriu Foundation
+            </strong>
+
+            <span>
+                P2P FileShare
+            </span>
+
+        </div>
+
+        <p>
+            Direct peer-to-peer file sharing.
+        </p>
+
+    </header>
+
+
+    <!-- HOME -->
+
+    <section
+        id="home"
+        class="card"
+    >
+
+        <h1>
+            P2P FileShare
+        </h1>
+
+        <p>
+            Send files directly between devices.
+            No central file storage.
+        </p>
+
+        <div class="buttons">
+
+            <button id="createBtn">
+                Create Transfer
+            </button>
+
+            <button
+                id="joinBtn"
+                class="secondary"
+            >
+                Join Transfer
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CREATE -->
+
+    <section
+        id="createPanel"
+        class="card hidden"
+    >
+
+        <h2>
+            Create Transfer
+        </h2>
+
+        <p>
+            Give this connection code to the
+            person you want to transfer files with.
+        </p>
+
+        <label>
+            Connection Code
+        </label>
+
+        <div class="code-box">
+
+            <code id="offerCode">
+                Generating...
+            </code>
+
+            <button id="copyOfferBtn">
+                Copy
+            </button>
+
+        </div>
+
+        <p
+            id="createStatus"
+            class="status"
+        >
+            Creating connection...
+        </p>
+
+        <div class="info-box">
+            The connection is established
+            automatically after the other device
+            joins.
+        </div>
+
+    </section>
+
+
+    <!-- JOIN -->
+
+    <section
+        id="joinPanel"
+        class="card hidden"
+    >
+
+        <h2>
+            Join Transfer
+        </h2>
+
+        <p>
+            Enter the connection code provided
+            by the sender.
+        </p>
+
+        <label>
+            Connection Code
+        </label>
+
+        <input
+            id="offerInput"
+            type="text"
+            maxlength="9"
+            autocomplete="off"
+            autocapitalize="characters"
+            spellcheck="false"
+            placeholder="ABCD-7X9P"
+        >
+
+        <button id="connectBtn">
+            Connect
+        </button>
+
+        <div
+            id="answerContainer"
+            class="hidden"
+        >
+
+            <p class="status">
+                Connection information sent.
+                Waiting for peer...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRANSFER -->
+
+    <section
+        id="transferPanel"
+        class="card hidden"
+    >
+
+        <div class="connected">
+
+            <span></span>
+
+            Connected to peer
+
+        </div>
+
+        <h2>
+            File Transfer
+        </h2>
+
+        <div id="dropZone">
+
+            <div class="drop-title">
+                Drop files here
+            </div>
+
+            <div class="drop-or">
+                or
+            </div>
+
+            <button id="selectBtn">
+                Select Files
+            </button>
+
+            <input
+                id="fileInput"
+                type="file"
+                multiple
+                hidden
+            >
+
+        </div>
+
+        <div id="fileList"></div>
+
+    </section>
+
+
+    <footer>
+
+        <span>
+            © 2024–2026 Shoriu Foundation
+        </span>
+
+        <a
+            href="https://license.shoriufoundation.org.az"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            License
+        </a>
+
+    </footer>
+
+</div>
+
+<script src="/app.js"></script>
+
+</body>
+</html>

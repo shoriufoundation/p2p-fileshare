@@ -1,0 +1,405 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: #0d0f14;
+    color: #f5f7fa;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.container {
+    width: min(850px, 92%);
+
+    margin: auto;
+
+    padding: 50px 0;
+}
+
+
+/* HEADER */
+
+header {
+    margin-bottom: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.brand strong {
+    font-size: 14px;
+    opacity: .6;
+}
+
+.brand span {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+header p {
+    margin-top: 8px;
+
+    color: #8e96a3;
+}
+
+
+/* CARD */
+
+.card {
+    background: #151820;
+
+    border: 1px solid #272c36;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    margin-bottom: 20px;
+}
+
+.card h1,
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #929aa8;
+    line-height: 1.5;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 12px 20px;
+
+    background: #ffffff;
+    color: #101216;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .85;
+}
+
+button.secondary {
+    background: #292e38;
+    color: white;
+}
+
+
+/* TEXTAREA */
+
+textarea {
+    width: 100%;
+
+    min-height: 150px;
+
+    margin-top: 8px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    border: 1px solid #303641;
+    border-radius: 8px;
+
+    background: #0d0f14;
+    color: white;
+
+    font-family: monospace;
+    font-size: 13px;
+}
+
+
+/* LABEL */
+
+label {
+    display: block;
+
+    margin-top: 22px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* CONNECTION CODE */
+
+.code-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    padding: 14px;
+
+    border: 1px solid #303641;
+
+    border-radius: 8px;
+
+    background: #0d0f14;
+}
+
+.code-box code {
+    flex: 1;
+
+    overflow: auto;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    word-break: break-all;
+}
+
+
+/* STATUS */
+
+.status {
+    margin-top: 15px;
+
+    font-size: 13px;
+}
+
+
+/* DROP ZONE */
+
+#dropZone {
+    margin-top: 20px;
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    border: 2px dashed #343a46;
+
+    border-radius: 12px;
+
+    transition: .2s;
+}
+
+#dropZone.dragover {
+    border-color: white;
+
+    background: #1a1e27;
+}
+
+.drop-title {
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.drop-or {
+    margin: 12px;
+
+    color: #777f8c;
+}
+
+
+/* FILE LIST */
+
+#fileList {
+    margin-top: 20px;
+}
+
+.file {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 14px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid #292e38;
+
+    border-radius: 8px;
+
+    background: #0d0f14;
+}
+
+.file-size {
+    color: #7e8795;
+}
+
+
+/* CONNECTED */
+
+.connected {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    color: #8fd694;
+
+    font-size: 14px;
+}
+
+.connected span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #62c96b;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 35px;
+
+    color: #69717e;
+
+    font-size: 13px;
+}
+
+footer a {
+    color: #9ca5b3;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* UTILITY */
+
+.hidden {
+    display: none !important;
+}
+
+
+@media (max-width: 600px) {
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .brand {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+input {
+    width: 100%;
+
+    margin-top: 8px;
+
+    margin-bottom: 15px;
+
+    padding: 14px;
+
+    border: 1px solid #303641;
+
+    border-radius: 8px;
+
+    background: #0d0f14;
+
+    color: white;
+
+    font-family: monospace;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #ffffff;
+}
+
+.info-box {
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: 1px solid #292e38;
+
+    border-radius: 8px;
+
+    background: #10131a;
+
+    color: #7e8795;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.download {
+    display: block;
+
+    margin-top: 10px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #292e38;
+
+    border-radius: 8px;
+
+    background: #151820;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.download:hover {
+    background: #1c212b;
+}

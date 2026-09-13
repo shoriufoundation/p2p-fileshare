@@ -1,0 +1,26 @@
+{
+  "name": "p2p-fileshare",
+  "version": "0.3.0",
+  "description": "Decentralized peer-to-peer file sharing — Shoriu Foundation",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [
+    "p2p",
+    "file-sharing",
+    "webrtc",
+    "signaling",
+    "decentralized",
+    "nodejs",
+    "shoriu-foundation"
+  ],
+  "author": "Shoriu Foundation",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://shoriufoundation.org.az",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
+  }
+}

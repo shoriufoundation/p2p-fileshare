@@ -1,0 +1,39 @@
+class PeerConnectionManager {
+
+    constructor() {
+        this.connection = null;
+        this.channel = null;
+    }
+
+    createConnection() {
+
+        this.connection =
+            new RTCPeerConnection({
+                iceServers: []
+            });
+
+        this.channel =
+            this.connection.createDataChannel("files");
+
+        return this.connection;
+    }
+
+    close() {
+
+        if (this.channel) {
+            this.channel.close();
+        }
+
+        if (this.connection) {
+            this.connection.close();
+        }
+
+        this.channel = null;
+        this.connection = null;
+    }
+
+}
+
+module.exports = {
+    PeerConnectionManager
+};
